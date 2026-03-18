@@ -1,15 +1,15 @@
 #!/bin/bash
 
 ################################################################################
-# Hepmad Astro Project Init Script
+# Astro Project Init Script
 #
-# Creates a Hepmad Astro project with Tailwind CSS and basic page scaffolding.
+# Creates a new Astro project with Tailwind CSS and basic page scaffolding.
 #
 # Usage:
 #   ./init.sh [project_name] [target_dir]
 #
 # Example:
-#   ./init.sh hepmad ~/projects
+#   ./init.sh my-site ~/projects
 ################################################################################
 
 set -e  # Exit on error
@@ -22,7 +22,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Default values
-PROJECT_NAME=${1:-hepmad}
+PROJECT_NAME=${1:-my-site}
 TARGET_DIR=${2:-.}
 
 # Get absolute paths
@@ -89,7 +89,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://hepmad.com',
+  site: 'https://example.com',  // Update with your site URL
 });
 EOF
     print_success "Created astro.config.mjs"
@@ -173,7 +173,7 @@ create_navbar_component() {
     <div class="flex h-16 justify-between">
       <div class="flex">
         <a href="/" class="flex flex-shrink-0 items-center">
-          <span class="text-xl font-bold font-serif text-text-primary">Hepmad</span>
+          <span class="text-xl font-bold font-serif text-text-primary">MySite</span>
         </a>
       </div>
       <div class="flex items-center space-x-8">
@@ -196,16 +196,16 @@ create_footer_component() {
   <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center justify-between md:flex-row">
       <p class="text-sm text-text-muted">
-        &copy; 2026 Hepmad. All rights reserved.
+        &copy; 2026 MySite. All rights reserved.
       </p>
       <div class="mt-4 flex space-x-6 md:mt-0">
-        <a href="https://github.com/harryhmx" target="_blank" rel="noopener" class="text-text-muted hover:text-text-primary transition-colors">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="text-text-muted hover:text-text-primary transition-colors">
           <span class="sr-only">GitHub</span>
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
           </svg>
         </a>
-        <a href="mailto:hello@hepmad.com" class="text-text-muted hover:text-text-primary transition-colors">
+        <a href="mailto:hello@example.com" class="text-text-muted hover:text-text-primary transition-colors">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
@@ -228,14 +228,14 @@ interface Props {
   title?: string;
 }
 
-const { title = 'Hepmad - Personal Brand' } = Astro.props;
+const { title = 'MySite' } = Astro.props;
 ---
 
 <!doctype html>
   <html lang="en" class="dark">
     <head>
       <meta charset="UTF-8" />
-      <meta name="description" content="Hepmad - Harry's personal brand website" />
+      <meta name="description" content="MySite - A modern website" />
       <meta name="viewport" content="width=device-width" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,18 +262,18 @@ create_home_page() {
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Hepmad - Home">
+<BaseLayout title="MySite - Home">
   <!-- Hero Section -->
   <section class="min-h-[80vh] flex items-center justify-center border-b border-bg-tertiary px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-4xl text-center">
       <h1 class="text-5xl font-bold font-serif tracking-tight text-text-primary sm:text-6xl lg:text-7xl">
-        Welcome to Hepmad
+        Welcome to MySite
       </h1>
       <p class="mt-8 text-xl leading-relaxed text-text-secondary sm:text-2xl">
-        Your personal brand website is ready. Run <code class="rounded bg-bg-tertiary px-2 py-1 text-accent-blue">npm run dev</code> to start building.
+        Your new website is ready. Run <code class="rounded bg-bg-tertiary px-2 py-1 text-accent-blue">npm run dev</code> to start building.
       </p>
       <div class="mt-12 text-text-muted">
-        Use the tailwind-layout-system skill to add full page layouts.
+        Customize this page or use the tailwind-layout-system skill to add full page layouts.
       </div>
     </div>
   </section>
@@ -295,7 +295,7 @@ EOF
 # Main Script
 ################################################################################
 
-print_header "🚀 Hepmad Astro Project Initializer"
+print_header "🚀 Astro Project Initializer"
 
 # Check if project already exists
 if [ -d "$PROJECT_PATH" ]; then

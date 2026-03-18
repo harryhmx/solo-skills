@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ################################################################################
-# Hepmad Tailwind Layout System Setup Script
+# Tailwind Layout System Setup Script
 #
 # Adds complete page layouts and blog system to an existing Astro project.
 # Assumes the project was created with astro-project-init skill.
@@ -117,20 +117,20 @@ create_home_page() {
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Hepmad - Home">
+<BaseLayout title="MySite - Home">
   <!-- Hero Section -->
   <section class="border-b border-bg-tertiary px-4 py-24 sm:py-32 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-5xl text-center">
       <h1 class="text-5xl font-bold font-serif tracking-tight text-text-primary sm:text-7xl">
-        Hi, I'm Harry
+        Welcome to MySite
       </h1>
       <p class="mt-8 text-xl leading-relaxed text-text-secondary sm:text-2xl">
-        Welcome to Hepmad — my personal brand website where I share my life stories,
-        travel experiences, and solo development journey.
+        A modern website template with a beautiful dark theme and blog functionality.
+        Customize this content to match your brand and message.
       </p>
       <div class="mt-12 flex items-center justify-center gap-x-6">
         <a href="/blog" class="rounded-md bg-accent-blue px-8 py-3 text-base font-semibold text-bg-primary shadow-sm hover:bg-accent-blue/90 transition-colors">
-          Read My Blog
+          Read the Blog
         </a>
       </div>
     </div>
@@ -139,29 +139,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- About Section -->
   <section class="px-4 py-20 sm:px-6 lg:px-8" id="about">
     <div class="mx-auto max-w-4xl">
-      <h2 class="text-3xl font-bold font-serif tracking-tight text-text-primary">About Me</h2>
+      <h2 class="text-3xl font-bold font-serif tracking-tight text-text-primary">About</h2>
       <p class="mt-6 text-lg leading-relaxed text-text-secondary">
-        Hepmad comes from <strong>H</strong>arry + S<strong>ep</strong>tember + No<strong>mad</strong> — a reflection of my journey
-        and aspirations. I'm building a life of freedom, exploration, and continuous growth.
+        This is a template section where you can introduce yourself or your project.
+        Replace this content with your own story, mission, or value proposition.
       </p>
 
       <h3 class="mt-12 text-2xl font-semibold text-text-primary">Core Values</h3>
       <ul class="mt-6 space-y-3 text-text-secondary">
-        <li>• <span class="text-accent-gold">Authenticity</span> — Living true to myself</li>
-        <li>• <span class="text-accent-gold">Curiosity</span> — Always learning, always exploring</li>
-        <li>• <span class="text-accent-gold">Freedom</span> — Designing a life of location independence</li>
-        <li>• <span class="text-accent-gold">Creation</span> — Building things that matter</li>
-        <li>• <span class="text-accent-gold">Connection</span> — Sharing stories and experiences</li>
+        <li>• <span class="text-accent-gold">Value One</span> — Description of your first value</li>
+        <li>• <span class="text-accent-gold">Value Two</span> — Description of your second value</li>
+        <li>• <span class="text-accent-gold">Value Three</span> — Description of your third value</li>
+        <li>• <span class="text-accent-gold">Value Four</span> — Description of your fourth value</li>
+        <li>• <span class="text-accent-gold">Value Five</span> — Description of your fifth value</li>
       </ul>
 
       <h3 class="mt-12 text-2xl font-semibold text-text-primary">Timeline</h3>
       <div class="mt-6 space-y-3 text-text-secondary">
-        <p><span class="text-accent-gold font-semibold">2006</span> — First major setback, learned resilience</p>
-        <p><span class="text-accent-gold font-semibold">2007</span> — Moved to Thailand for university, began global journey</p>
-        <p><span class="text-accent-gold font-semibold">2014</span> — Returned to China, started working in Shenzhen</p>
-        <p><span class="text-accent-gold font-semibold">2015-2020</span> — Entrepreneurship attempts in travel industry</p>
-        <p><span class="text-accent-gold font-semibold">2020-2025</span> — Pandemic abroad, exploration and partnerships</p>
-        <p><span class="text-accent-gold font-semibold">2026</span> — Launching Hepmad, committing to the indie developer path</p>
+        <p><span class="text-accent-gold font-semibold">Year One</span> — First milestone or achievement</p>
+        <p><span class="text-accent-gold font-semibold">Year Two</span> — Second milestone or achievement</p>
+        <p><span class="text-accent-gold font-semibold">Year Three</span> — Third milestone or achievement</p>
+        <p><span class="text-accent-gold font-semibold">Year Four</span> — Fourth milestone or achievement</p>
+        <p><span class="text-accent-gold font-semibold">Year Five</span> — Fifth milestone or achievement</p>
+        <p><span class="text-accent-gold font-semibold">Year Six</span> — Sixth milestone or achievement</p>
       </div>
     </div>
   </section>
@@ -171,7 +171,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="mx-auto max-w-5xl">
       <h2 class="text-3xl font-bold font-serif tracking-tight text-text-primary">Latest from the Blog</h2>
       <p class="mt-4 text-lg text-text-secondary">
-        I write about three main areas of my life.
+        Explore articles organized by category.
       </p>
 
       <div class="mt-10 grid gap-6 sm:grid-cols-3">
@@ -180,7 +180,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Life Story
           </h3>
           <p class="mt-3 text-sm text-text-secondary">
-            人生母本 — Personal growth and life reflections
+            Personal growth and life reflections
           </p>
         </a>
 
@@ -189,7 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Travel
           </h3>
           <p class="mt-3 text-sm text-text-secondary">
-            环球旅行 — Travel stories and global experiences
+            Travel stories and global experiences
           </p>
         </a>
 
@@ -198,7 +198,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Solo Dev
           </h3>
           <p class="mt-3 text-sm text-text-secondary">
-            独立开发 — Development logs and behind the scenes
+            Development logs and behind the scenes
           </p>
         </a>
       </div>
@@ -219,10 +219,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Feel free to reach out via email or connect on social media.
       </p>
       <div class="mt-8 flex justify-center space-x-8">
-        <a href="mailto:hello@hepmad.com" class="text-text-secondary hover:text-accent-blue transition-colors">
-          hello@hepmad.com
+        <a href="mailto:hello@example.com" class="text-text-secondary hover:text-accent-blue transition-colors">
+          hello@example.com
         </a>
-        <a href="https://github.com/harryhmx" target="_blank" rel="noopener" class="text-text-secondary hover:text-accent-blue transition-colors">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="text-text-secondary hover:text-accent-blue transition-colors">
           GitHub
         </a>
       </div>
@@ -257,7 +257,7 @@ const displayPosts = categoryFilter
   : sortedPosts;
 ---
 
-<BaseLayout title="Hepmad - Blog">
+<BaseLayout title="MySite - Blog">
   <div class="px-4 py-16 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-4xl">
       <h1 class="text-4xl font-bold font-serif tracking-tight text-text-primary">Blog</h1>
@@ -340,7 +340,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BaseLayout title={`${post.data.title} - Hepmad`}>
+<BaseLayout title={`${post.data.title} - MySite`}>
   <article class="px-4 py-16 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl">
       <!-- Back link -->
@@ -376,89 +376,81 @@ EOF
 
 create_sample_posts() {
     # Life Story sample
-    cat > "$PROJECT_DIR_ABS/src/content/blog/life-story/2026-the-year-i-decided-to-get-serious.md" << 'EOF'
+    cat > "$PROJECT_DIR_ABS/src/content/blog/life-story/sample-post-one.md" << 'EOF'
 ---
-title: "2026: The Year I Decided to Get Serious"
-description: "Why I'm committing to the indie developer path and launching Hepmad."
+title: "Getting Started with Your New Website"
+description: "Welcome to your new Astro website. Here's how to get started."
 date: 2026-01-01
 lang: en
 category: life-story
 ---
 
-This is the year everything changes. After years of exploration, partnerships, and side projects, I'm finally going all-in on building my personal brand and solo development journey.
+Welcome to your new website! This is a sample post to help you get started with creating content.
 
-## Why Now?
+## Getting Started
 
-Looking back at my timeline — from the setbacks in 2006 to moving to Thailand in 2007, from entrepreneurship attempts to surviving the pandemic abroad — I realize I've been preparing for this moment without knowing it.
+To add your own posts:
 
-## What to Expect
+1. Create new `.md` files in `src/content/blog/` directories
+2. Add frontmatter with title, description, date, and category
+3. Write your content in Markdown
+4. Run `npm run dev` to see your changes
 
-This blog will document:
+## Customization
 
-- **Life Story** — Personal growth and reflections
-- **Travel** — Experiences from living abroad
-- **Solo Dev** — Behind the scenes of what I'm building
+- Edit `src/content/config.ts` to modify categories
+- Update the blog pages to match your content structure
+- Replace sample content with your own
 
-Let's see where this journey takes us.
+Happy blogging!
 EOF
 
     # Travel sample
-    cat > "$PROJECT_DIR_ABS/src/content/blog/travel/surviving-pandemic-abroad.md" << 'EOF'
+    cat > "$PROJECT_DIR_ABS/src/content/blog/travel/sample-post-two.md" << 'EOF'
 ---
-title: "Surviving the Pandemic Abroad: 18 Months in 5 Countries"
-description: "How I navigated lockdowns, border closures, and uncertainty while living overseas."
+title: "Your Second Sample Post"
+description: "Another sample post to demonstrate the blog functionality."
 date: 2026-01-15
 lang: en
 category: travel
 ---
 
-When the pandemic hit, I wasn't home. I was abroad, with no clear path back and an uncertain future.
+This is another sample post to show how the blog system works.
 
-## The Journey
+## Features
 
-Over 18 months, I found myself in:
+The blog system includes:
 
-1. Thailand — where it all began
-2. Nepal — mountains and lockdowns
-3. UAE — desert waiting
-4. Turkey — between continents
-5. Multiple stops in between
+- Category filtering
+- Clean, readable typography
+- Responsive design
+- Markdown support
 
-## Lessons Learned
-
-Living through a global pandemic while abroad taught me resilience, adaptability, and the value of community — wherever you find it.
+Replace this with your own content!
 EOF
 
     # Solo Dev sample
-    cat > "$PROJECT_DIR_ABS/src/content/blog/solo-dev/why-i-chose-solo-dev-path.md" << 'EOF'
+    cat > "$PROJECT_DIR_ABS/src/content/blog/solo-dev/sample-post-three.md" << 'EOF'
 ---
-title: "Why I Chose the Solo Developer Path"
-description: "My journey from employed developer to indie hacker, and why I'm never looking back."
+title: "Your Third Sample Post"
+description: "The final sample post demonstrating the blog layout."
 date: 2026-01-20
 lang: en
 category: solo-dev
 ---
 
-The question I get most often: "Isn't solo development lonely?"
+This is the third and final sample post included with the template.
 
-The answer might surprise you.
+## Next Steps
 
-## The Freedom to Build
+Now that you have the structure set up:
 
-When you work for someone else, you build their vision. When you're a solo developer, every line of code brings you closer to your own goals.
+1. Delete or modify these sample posts
+2. Add your own content
+3. Customize the design to match your brand
+4. Publish your site
 
-## It's Not About Being Alone
-
-Solo development doesn't mean working in isolation. It means:
-
-- Choosing your projects
-- Setting your own pace
-- Building directly with users
-- Owning the outcome
-
-## What I'm Working On
-
-I'm building Agent Skills — reusable AI skill packages. And this website is just the beginning.
+Enjoy building your new website!
 EOF
 
     print_success "Created sample blog posts (3 posts)"
@@ -468,7 +460,7 @@ EOF
 # Main Script
 ################################################################################
 
-print_header "🚀 Hepmad Tailwind Layout System Setup"
+print_header "🚀 Tailwind Layout System Setup"
 
 # Validate project
 validate_project

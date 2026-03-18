@@ -12,16 +12,16 @@ This directory contains custom Agent Skills developed to streamline repetitive t
 
 ### 1. astro-project-init
 
-Initialize a Hepmad Astro project with Tailwind CSS and basic page scaffolding.
+Initialize a new Astro project with Tailwind CSS and basic page scaffolding.
 
 **Description:** Creates a standardized Astro project from scratch with the "Late Night Flight" dark theme, base components (Navbar, Footer, BaseLayout), and a minimal Home page for verification.
 
 **Use Cases:**
-- Create new Hepmad Astro projects
+- Create new Astro projects
 - Set up Tailwind CSS with custom dark theme
 - Generate base project structure
 
-**Version:** 1.1.0
+**Version:** 2.0.0
 
 ---
 
@@ -72,7 +72,7 @@ Convert Markdown files to PDF with Chinese font support using WeasyPrint.
 
 ### 4. tailwind-layout-system
 
-Add complete page layouts and blog system to an existing Hepmad Astro project.
+Add complete page layouts and blog system to an existing Astro project.
 
 **Description:** Enhances an Astro project created by `astro-project-init` with full page layouts, blog listing with category filtering, and Content Collections configuration.
 
@@ -85,10 +85,10 @@ Add complete page layouts and blog system to an existing Hepmad Astro project.
 **Features:**
 - Overwrites minimal Home page with complete version
 - Blog listing with category filters
-- Three sample blog posts (Life Story, Travel, Solo Dev)
+- Sample blog posts for testing
 - Uses "Late Night Flight" dark theme
 
-**Version:** 1.0.0
+**Version:** 2.0.0
 
 ---
 
@@ -121,7 +121,7 @@ tailwind-layout-system (enhance with layouts)
 
 ```bash
 # Astro project initialization
-bash ~/projects/huang/.claude/skills/astro-project-init/scripts/init.sh hepmad .
+bash ~/projects/huang/.claude/skills/astro-project-init/scripts/init.sh my-site .
 
 # Content conversion
 source ~/venv/hepmad/bin/activate && python ~/projects/huang/.claude/skills/content-layout-expert/scripts/convert_to_markdown.py input.docx
@@ -137,7 +137,7 @@ bash ~/projects/huang/.claude/skills/tailwind-layout-system/scripts/setup.sh .
 
 Simply describe the task:
 
-- *"Initialize a new Hepmad Astro project"*
+- *"Initialize a new Astro project"*
 - *"Convert this DOCX to Markdown and extract images"*
 - *"Convert this Markdown file to PDF"*
 - *"Add complete page layouts to my Astro project"*

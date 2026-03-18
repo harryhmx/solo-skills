@@ -19,14 +19,16 @@ export default defineConfig({
 ```
 src/content/
 ├── blog/
-│   ├── life-story/
+│   ├── category-one/
 │   │   └── post.md
-│   ├── travel/
+│   ├── category-two/
 │   │   └── post.md
-│   └── solo-dev/
+│   └── category-three/
 │       └── post.md
 └── config.ts
 ```
+
+**Note:** The template includes three default categories (life-story, travel, solo-dev). You can customize these by modifying the schema in `config.ts` and updating the directory structure accordingly.
 
 ### Collection Schema (`src/content/config.ts`)
 
@@ -39,12 +41,14 @@ const blog = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     lang: z.enum(['en', 'zh']).default('en'),
-    category: z.enum(['life-story', 'travel', 'solo-dev']),
+    category: z.enum(['life-story', 'travel', 'solo-dev']), // Customize these categories
   }),
 });
 
 export const collections = { blog };
 ```
+
+**Customization:** To use your own categories, update the `z.enum()` array with your desired category names and create corresponding directories under `src/content/blog/`.
 
 ## Using Collections
 
@@ -92,7 +96,7 @@ title: "My Post Title"
 description: "A brief description"
 date: 2026-01-01
 lang: en
-category: life-story
+category: life-story  # Use one of your defined categories
 ---
 
 # Post Content Here

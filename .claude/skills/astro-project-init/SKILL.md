@@ -1,17 +1,17 @@
 ---
 name: astro-project-init
-description: "Initialize a Hepmad Astro project with Tailwind CSS and basic page scaffolding"
+description: "Initialize a new Astro project with Tailwind CSS and basic page scaffolding"
 author: Harry
-version: "1.1.0"
+version: "2.0.0"
 ---
 
 # Astro Project Init Skill
 
-A skill for creating a standardized Hepmad Astro project with Tailwind CSS integration and basic page structure.
+A skill for quickly creating a new Astro project with Tailwind CSS integration and basic page structure. Perfect for starting any website project.
 
 ## Use Cases
 
-- Create a new Hepmad Astro project from scratch
+- Create a new Astro project from scratch
 - Set up Tailwind CSS integration with "Late Night Flight" dark theme
 - Generate base project structure with minimal Home page
 - Create BaseLayout with Navbar and Footer components
@@ -20,7 +20,7 @@ A skill for creating a standardized Hepmad Astro project with Tailwind CSS integ
 
 | Parameter | Description | Default | Required |
 |-----------|-------------|---------|----------|
-| `project_name` | Name of the Astro project | `hepmad` | No |
+| `project_name` | Name of the Astro project | `my-site` | No |
 | `target_dir` | Target directory for the project | Current directory | No |
 
 ## Output
@@ -43,16 +43,16 @@ A skill for creating a standardized Hepmad Astro project with Tailwind CSS integ
 
 ```bash
 # Run the skill script directly
-bash ~/projects/hepmad/.claude/skills/astro-project-init/scripts/init.sh [project_name] [target_dir]
+bash ~/projects/huang/.claude/skills/astro-project-init/scripts/init.sh [project_name] [target_dir]
 
 # Example: Create in current directory
-bash ~/projects/hepmad/.claude/skills/astro-project-init/scripts/init.sh hepmad .
+bash ~/projects/huang/.claude/skills/astro-project-init/scripts/init.sh my-site .
 ```
 
 ### Option 2: Interactive with Claude Code
 
 ```
-"Use the astro-project-init skill to create a new Hepmad Astro project named 'hepmad' in the current directory."
+"Use the astro-project-init skill to create a new Astro project named 'my-site' in the current directory."
 ```
 
 ## Scripts
@@ -76,10 +76,10 @@ bash scripts/init.sh [project_name] [target_dir]
 **Example:**
 ```bash
 # Create project in current directory
-bash scripts/init.sh hepmad .
+bash scripts/init.sh my-site .
 
 # Create project in specific directory
-bash scripts/init.sh hepmad ~/projects
+bash scripts/init.sh my-site ~/projects
 ```
 
 ## Project Structure
@@ -157,7 +157,8 @@ The skill creates a professional dark-themed website with the "Late Night Flight
 1. Run `npm install` to install dependencies
 2. Run `npm run dev` to start development server
 3. Open `http://localhost:4321` to view the site
-4. Use `tailwind-layout-system` skill to add full page layouts
+4. Customize the site name, colors, and content as needed
+5. Use `tailwind-layout-system` skill to add full page layouts
 
 **Next Steps:**
 - Use the `tailwind-layout-system` skill to add:

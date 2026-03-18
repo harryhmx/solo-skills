@@ -1,13 +1,13 @@
 ---
 name: tailwind-layout-system
-description: "Add complete page layouts and blog system to an existing Hepmad Astro project"
+description: "Add complete page layouts and blog system to an existing Astro project"
 author: Harry
-version: "1.0.0"
+version: "2.0.0"
 ---
 
 # Tailwind Layout System Skill
 
-A skill for adding complete page layouts and blog functionality to an existing Hepmad Astro project created by `astro-project-init`.
+A skill for adding complete page layouts and blog functionality to an existing Astro project created by `astro-project-init`.
 
 ## Use Cases
 
@@ -38,16 +38,16 @@ A skill for adding complete page layouts and blog functionality to an existing H
 
 ```bash
 # Run from your Astro project directory
-bash ~/projects/hepmad/.claude/skills/tailwind-layout-system/scripts/setup.sh [project_dir]
+bash ~/projects/huang/.claude/skills/tailwind-layout-system/scripts/setup.sh [project_dir]
 
 # Example: Run from current directory
-bash ~/projects/hepmad/.claude/skills/tailwind-layout-system/scripts/setup.sh .
+bash ~/projects/huang/.claude/skills/tailwind-layout-system/scripts/setup.sh .
 ```
 
 ### Option 2: Interactive with Claude Code
 
 ```
-"Use the tailwind-layout-system skill to add complete page layouts to my Hepmad project."
+"Use the tailwind-layout-system skill to add complete page layouts to my Astro project."
 ```
 
 ## Scripts
@@ -80,20 +80,18 @@ Complete Home page with the following sections:
 
 **Hero Section:**
 - Large heading with serif font
-- Subtitle describing Hepmad's purpose
+- Subtitle describing the site's purpose
 - CTA button linking to Blog
 
 **About Section:**
-- Personal story intro (Hepmad name origin)
-- Core values with gold-accented keywords:
-  - Authenticity, Curiosity, Freedom, Creation, Connection
-- Timeline with gold-highlighted years:
-  - 2006-2026 journey highlights
+- Introduction text
+- Core values/points with gold-accented keywords
+- Timeline with gold-highlighted years
 
 **Blog Section:**
-- Three category cards (Life Story, Travel, Solo Dev)
+- Three category cards
 - Hover effects with gold border
-- Chinese subtitles for each category
+- Descriptions for each category
 
 **Contact Section:**
 - Email link
@@ -139,9 +137,11 @@ export const collections = { blog };
 
 ### Sample Posts
 
-1. **Life Story**: "2026: The Year I Decided to Get Serious"
-2. **Travel**: "Surviving the Pandemic Abroad: 18 Months in 5 Countries"
-3. **Solo Dev**: "Why I Chose the Solo Developer Path"
+1. **Category 1**: "Sample Post Title 1"
+2. **Category 2**: "Sample Post Title 2"
+3. **Category 3**: "Sample Post Title 3"
+
+**Note:** The sample posts use generic category names (life-story, travel, solo-dev). You should customize these categories to match your content needs by editing the Content Collections schema and updating the blog pages accordingly.
 
 ## Design System
 

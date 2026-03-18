@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a centralized collection of Agent Skills - reusable, self-contained modules designed for AI-assisted development workflows. Skills are developed for personal projects but maintained separately for reusability.
 
-**Key principle**: Agent Skills are developed once and reused across projects. The actual project code (e.g., Hepmad website) lives in separate repositories, with symlinked skills when needed.
+**Key principle**: Agent Skills are developed once and reused across projects. The actual project code lives in separate repositories, with symlinked skills when needed.
 
 ---
 
@@ -92,14 +92,14 @@ python ~/projects/huang/.claude/skills/<skill>/scripts/<script>.py [args]
 
 ### Via AI Assistant
 Describe the task naturally:
-- *"Initialize a new Hepmad Astro project"*
+- *"Initialize a new Astro project"*
 - *"Convert this DOCX to Markdown and extract images"*
 - *"Convert this Markdown file to PDF"*
 
 ### Symlinking Skills to Projects
-For projects that need specific skills (e.g., Hepmad needs astro-project-init):
+For projects that need specific skills (e.g., an Astro project needs astro-project-init):
 ```bash
-ln -s ~/projects/huang/.claude/skills/astro-project-init ~/projects/hepmad/.claude/skills/astro-project-init
+ln -s ~/projects/huang/.claude/skills/astro-project-init ~/projects/your-project/.claude/skills/astro-project-init
 ```
 
 ---
@@ -141,8 +141,7 @@ Used by astro-project-init and tailwind-layout-system:
 
 **Absolute paths (use these in scripts):**
 - Skills root: `~/projects/huang/.claude/skills/`
-- Virtual environment: `~/venv/hepmad/`
-- Hepmad project: `~/projects/hepmad/`
+- Virtual environment: `~/venv/hepmad/` (or your preferred venv)
 
 **Relative paths (use these in documentation):**
 - From repo root: `.claude/skills/<skill>/SKILL.md`

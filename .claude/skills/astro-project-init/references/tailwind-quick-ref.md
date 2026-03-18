@@ -1,6 +1,6 @@
 # Tailwind CSS Quick Reference
 
-Quick reference for Tailwind CSS utility classes used in Hepmad project.
+Quick reference for Tailwind CSS utility classes used in Astro projects with the "Late Night Flight" dark theme.
 
 ## Container & Spacing
 
@@ -86,7 +86,7 @@ Quick reference for Tailwind CSS utility classes used in Hepmad project.
 <div class="rounded-md shadow-md">...</div>
 ```
 
-## Hepmad Custom Colors (Late Night Flight Dark Theme)
+## Custom Colors (Late Night Flight Dark Theme)
 
 Defined in `tailwind.config.mjs`:
 
