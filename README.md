@@ -70,7 +70,30 @@ Convert Markdown files to PDF with Chinese font support using WeasyPrint.
 
 ---
 
-### 4. tailwind-layout-system
+### 4. image-stitch
+
+Stitch multiple images together vertically or horizontally.
+
+**Description:** Combines multiple images into a single composite image with configurable alignment, spacing, and background color.
+
+**Use Cases:**
+- Combine screenshots into one image
+- Create photo collages
+- Merge document scans
+- Stack related images together
+
+**Features:**
+- Vertical or horizontal stitching
+- Configurable spacing between images
+- Multiple alignment options (left/center/right or top/center/bottom)
+- Custom background color support
+- Automatic RGB conversion for all image formats
+
+**Version:** 1.0.0
+
+---
+
+### 5. tailwind-layout-system
 
 Add complete page layouts and blog system to an existing Astro project.
 
@@ -99,6 +122,7 @@ Add complete page layouts and blog system to an existing Astro project.
 | `astro-project-init` | Initialize Astro project | project_name, target_dir | Complete Astro project structure | [SKILL.md](.claude/skills/astro-project-init/SKILL.md) |
 | `content-layout-expert` | Convert document formats | .docx/.pdf/.md file | .md/.html + images/ + tables/ | [SKILL.md](.claude/skills/content-layout-expert/SKILL.md) |
 | `md-to-pdf` | Markdown to PDF | .md file | .pdf file | [SKILL.md](.claude/skills/md-to-pdf/SKILL.md) |
+| `image-stitch` | Stitch images together | Multiple image files | Single composite image | [SKILL.md](.claude/skills/image-stitch/SKILL.md) |
 | `tailwind-layout-system` | Add layouts to Astro project | project_dir | Enhanced pages + blog system | [SKILL.md](.claude/skills/tailwind-layout-system/SKILL.md) |
 
 ---
@@ -129,6 +153,9 @@ source ~/venv/hepmad/bin/activate && python ~/projects/huang/.claude/skills/cont
 # Markdown to PDF
 source ~/venv/hepmad/bin/activate && python ~/projects/huang/.claude/skills/md-to-pdf/scripts/convert.py input.md
 
+# Image stitching
+source ~/venv/hepmad/bin/activate && python ~/projects/huang/.claude/skills/image-stitch/scripts/stitch.py output.jpg img1.jpg img2.jpg
+
 # Add layouts to existing project
 bash ~/projects/huang/.claude/skills/tailwind-layout-system/scripts/setup.sh .
 ```
@@ -140,6 +167,7 @@ Simply describe the task:
 - *"Initialize a new Astro project"*
 - *"Convert this DOCX to Markdown and extract images"*
 - *"Convert this Markdown file to PDF"*
+- *"Stitch these images together vertically"*
 - *"Add complete page layouts to my Astro project"*
 
 ---
@@ -162,6 +190,11 @@ Simply describe the task:
 │   │   └── convert_to_html.py
 │   └── references/
 │       └── requirements.txt
+├── image-stitch/
+│   ├── SKILL.md
+│   ├── scripts/
+│   │   └── stitch.py
+│   └── references/
 ├── md-to-pdf/
 │   ├── SKILL.md
 │   ├── scripts/

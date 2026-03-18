@@ -18,6 +18,7 @@ This is a centralized collection of Agent Skills - reusable, self-contained modu
 │   └── skills/                    # All Agent Skills
 │       ├── astro-project-init/    # Astro project scaffolding
 │       ├── content-layout-expert/ # DOCX/PDF to Markdown conversion
+│       ├── image-stitch/          # Image stitching/compositing
 │       ├── md-to-pdf/             # Markdown to PDF with Chinese font support
 │       └── tailwind-layout-system/# Complete layouts for Astro projects
 ├── .internal/
@@ -59,6 +60,7 @@ version: "1.0.0"
 |-------|----------|---------|------------------|
 | `astro-project-init` | Bash | Initialize Astro projects with Tailwind CSS | Node.js, npm |
 | `content-layout-expert` | Python | Convert DOCX/PDF to Markdown with image/table extraction | python-docx, pypdf, mammoth |
+| `image-stitch` | Python | Stitch multiple images into one composite | Pillow (PIL) |
 | `md-to-pdf` | Python | Convert Markdown to PDF with Chinese fonts | weasyprint, markdown |
 | `tailwind-layout-system` | Bash | Add complete layouts to existing Astro projects | Requires astro-project-init output |
 
@@ -71,7 +73,7 @@ version: "1.0.0"
 - Use `set -e` for error handling
 - Color output functions: `print_header()`, `print_step()`, `print_success()`
 
-### Python Skills (content-layout-expert, md-to-pdf)
+### Python Skills (content-layout-expert, image-stitch, md-to-pdf)
 - Use virtual environment: `source ~/venv/hepmad/bin/activate`
 - Dependencies listed in `references/requirements.txt`
 - Shebang: `#!/usr/bin/env python3`
@@ -95,6 +97,7 @@ Describe the task naturally:
 - *"Initialize a new Astro project"*
 - *"Convert this DOCX to Markdown and extract images"*
 - *"Convert this Markdown file to PDF"*
+- *"Stitch these images together vertically"*
 
 ### Symlinking Skills to Projects
 For projects that need specific skills (e.g., an Astro project needs astro-project-init):
