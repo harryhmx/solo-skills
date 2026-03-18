@@ -115,23 +115,7 @@ Complete Home page with the following sections:
 
 ## Content Collections
 
-### Configuration (`src/content/config.ts`)
-
-```ts
-import { defineCollection, z } from 'astro:content';
-
-const blog = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    date: z.coerce.date(),
-    lang: z.enum(['en', 'zh']).default('en'),
-    category: z.enum(['life-story', 'travel', 'solo-dev']),
-  }),
-});
-
-export const collections = { blog };
-```
+For detailed Content Collections configuration and schema, see [references/astro-content-collections.md](references/astro-content-collections.md).
 
 ### Sample Posts
 
@@ -150,6 +134,8 @@ Uses the same "Late Night Flight" dark theme established by `astro-project-init`
 - Consistent spacing and container widths
 - Mobile-first responsive design
 
+For detailed color values and Tailwind patterns, see `astro-project-init/references/tailwind-quick-ref.md`.
+
 ## Dependencies
 
 **Requires:**
@@ -157,30 +143,6 @@ Uses the same "Late Night Flight" dark theme established by `astro-project-init`
 - Tailwind CSS configured with "Late Night Flight" theme
 
 **No additional packages needed** - uses existing dependencies from `astro-project-init`
-
-## Project Structure After Setup
-
-```
-src/
-├── components/
-│   ├── Navbar.astro
-│   └── Footer.astro
-├── layouts/
-│   └── BaseLayout.astro
-├── pages/
-│   ├── index.astro        # Complete Home page (overwritten)
-│   ├── blog.astro         # Blog listing (new)
-│   └── blog/
-│       └── [...slug].astro # Blog detail (new)
-├── content/
-│   ├── config.ts          # Content Collections config (new)
-│   └── blog/              # Sample blog posts (new)
-│       ├── life-story/
-│       ├── travel/
-│       └── solo-dev/
-└── styles/
-    └── global.css
-```
 
 ## Notes
 

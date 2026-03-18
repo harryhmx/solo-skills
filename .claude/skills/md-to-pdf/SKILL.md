@@ -72,32 +72,13 @@ source ~/venv/hepmad/bin/activate  # Or your preferred virtual environment
 pip install markdown weasyprint pygments
 ```
 
-### System Dependencies
+### System Dependencies & Installation
 
-**Linux (Ubuntu/Debian):**
-
-```bash
-# Core dependencies for WeasyPrint
-sudo apt install python3-dev libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
-
-# Chinese fonts (REQUIRED for Chinese character display)
-sudo apt install fonts-wqy-zenhei fonts-wqy-microhei
-```
-
-**macOS:**
-
-```bash
-# Chinese fonts are built-in (PingFang, STHeiti)
-brew install python3
-pip3 install markdown weasyprint pygments
-```
-
-**Windows:**
-
-```bash
-# Chinese fonts are built-in (Microsoft YaHei)
-pip install markdown weasyprint pygments
-```
+See [references/installation.md](references/installation.md) for:
+- Linux (Ubuntu/Debian) system dependencies
+- macOS setup
+- Windows setup
+- Chinese font installation
 
 ## Features
 
@@ -125,99 +106,19 @@ python .claude/skills/md-to-pdf/scripts/convert.py meeting-summary.md
 # Output: meeting-summary.pdf (in same directory)
 ```
 
-## Markdown Extensions Supported
-
-| Extension | Description |
-|-----------|-------------|
-| `tables` | GitHub-style tables |
-| `fenced_code` | Triple-backtick code blocks |
-| `codehilite` | Syntax highlighting |
-| `toc` | Table of contents (`[TOC]`) |
-| `nl2br` | Newline to `<br>` |
-| `sane_lists` | Better list parsing |
-| `attr_list` | Attributes on elements |
-
-## Why WeasyPrint?
-
-| Library | Chinese Support | CSS Support | Ease of Use | External Deps |
-|---------|----------------|-------------|-------------|---------------|
-| **WeasyPrint** | ✅ Excellent | ✅ Full CSS | ✅ Easy | ❌ None (Pure Python) |
-| reportlab | ⚠️ Complex (manual font registration) | ❌ Limited | ⚠️ Complex | ❌ None |
-| pdfkit | ⚠️ Depends on wkhtmltopdf | ✅ Full CSS | ✅ Easy | ✅ wkhtmltopdf binary |
-
-**WeasyPrint advantages:**
-- Pure Python - no external binaries required
-- Full CSS3 support for beautiful styling
-- Automatic font detection on all platforms
-- Active development and good documentation
-
-## CSS Styling
-
-The generated PDF includes professional styling:
-- **Colors**: Blue (#3498db) for headers, Dark gray (#2c3e50) for text
-- **Fonts**: Auto-detected Chinese fonts + sans-serif fallback
-- **Code blocks**: GitHub Dark theme for syntax highlighting
-- **Tables**: Blue headers with alternating row colors
-- **Margins**: 2cm on all sides
-- **Page breaks**: Optimized to avoid orphaned content
-
 ## Troubleshooting
 
-### Chinese characters show as boxes (□□□)
-
-**Cause:** Chinese fonts not installed on system
-
-**Solution:**
-```bash
-# Linux/Ubuntu
-sudo apt install fonts-wqy-zenhei fonts-wqy-microhei
-
-# Verify installation
-fc-list :lang=zh-cn
-```
-
-### WeasyPrint installation fails
-
-**Cause:** Missing system dependencies
-
-**Solution:**
-```bash
-sudo apt install python3-dev libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
-```
-
-### Import error: No module named 'weasyprint'
-
-**Cause:** Not installed in virtual environment
-
-**Solution:**
-```bash
-source ~/venv/hepmad/bin/activate  # Or your preferred virtual environment
-pip install markdown weasyprint pygments
-```
-
-### PDF file size is very small (<30KB)
-
-**Cause:** Chinese fonts not embedded (fallback to system fonts)
-
-**Solution:** Install Chinese fonts (see above) and regenerate PDF
-
-### Permission denied error
-
-**Cause:** Output directory not writable
-
-**Solution:** Check write permissions or specify a writable output path:
-```bash
-python convert.py input.md -o /tmp/output.pdf
-```
-
-## Notes
-
-- Always activate virtual environment before running the script
-- Output PDF is saved in the same directory as the input Markdown file (unless specified)
-- Font selection is automatic with intelligent fallbacks
-- For best Chinese rendering, WQY fonts are recommended on Linux
-- Code blocks use GitHub Dark theme for syntax highlighting
+See [references/troubleshooting.md](references/troubleshooting.md) for:
+- Chinese characters showing as boxes (□□□)
+- WeasyPrint installation failures
+- Import errors
+- PDF file size issues
+- Permission errors
 
 ## See Also
 
-- `references/` - Documentation for WeasyPrint, Markdown, and Python-Markdown
+- [references/installation.md](references/installation.md) - Installation guide
+- [references/troubleshooting.md](references/troubleshooting.md) - Common issues and solutions
+- [references/weasyprint-guide.md](references/weasyprint-guide.md) - WeasyPrint documentation
+- [references/pygments-guide.md](references/pygments-guide.md) - Syntax highlighting
+- [references/markdown-extensions.md](references/markdown-extensions.md) - Supported Markdown extensions
