@@ -1,8 +1,6 @@
 ---
 name: astro-project-init
-description: "Initialize a new Astro project with Tailwind CSS and basic page scaffolding"
-author: Harry
-version: "2.0.0"
+description: "Initialize a new Astro project with Tailwind CSS and 'Late Night Flight' dark theme. Use when creating a new Astro project from scratch or setting up project scaffolding with Navbar, Footer, BaseLayout, and dark theme configuration."
 ---
 
 # Astro Project Init Skill

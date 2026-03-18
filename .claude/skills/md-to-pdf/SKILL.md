@@ -1,8 +1,6 @@
 ---
 name: md-to-pdf
-description: "Convert Markdown files to PDF with Chinese font support using WeasyPrint"
-author: "harryhmx"
-version: "1.0.0"
+description: "Convert Markdown files to PDF with Chinese font support using WeasyPrint. Use when converting Markdown documents (meeting notes, documentation, reports) to PDF, especially when Chinese characters are needed. Features: automatic font detection, syntax highlighting, table of contents, styled tables."
 ---
 
 # Markdown to PDF Converter

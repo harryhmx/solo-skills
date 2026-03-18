@@ -1,8 +1,6 @@
 ---
 name: tailwind-layout-system
-description: "Add complete page layouts and blog system to an existing Astro project"
-author: Harry
-version: "2.0.0"
+description: "Add complete page layouts (Hero, About, Blog, Contact) and blog system to an existing Astro project. Use when enhancing an Astro project created by astro-project-init with: full Home page, blog listing with category filtering, blog post detail pages, Content Collections configuration, and sample blog content."
 ---
 
 # Tailwind Layout System Skill
