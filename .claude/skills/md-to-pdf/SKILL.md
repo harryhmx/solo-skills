@@ -35,13 +35,13 @@ Convert Markdown files to beautifully formatted PDF documents with full Chinese 
 
 ```bash
 # Activate virtual environment first (required)
-source ~/venv/hepmad/bin/activate
+source ~/venv/hepmad/bin/activate  # Or your preferred virtual environment
 
 # Convert with default settings
-python /home/harry/projects/hepmad/.claude/skills/md-to-pdf/scripts/convert.py input.md
+python .claude/skills/md-to-pdf/scripts/convert.py input.md
 
 # Specify output path
-python /home/harry/projects/hepmad/.claude/skills/md-to-pdf/scripts/convert.py input.md -o output.pdf
+python .claude/skills/md-to-pdf/scripts/convert.py input.md -o output.pdf
 ```
 
 ### Via AI Assistant
@@ -70,7 +70,7 @@ Main conversion script that:
 ### Python Packages
 
 ```bash
-source ~/venv/hepmad/bin/activate
+source ~/venv/hepmad/bin/activate  # Or your preferred virtual environment
 pip install markdown weasyprint pygments
 ```
 
@@ -119,10 +119,10 @@ pip install markdown weasyprint pygments
 ## Example
 
 ```bash
-# Convert a meeting summary
-cd /home/harry/projects/hepmad/demo/rbh/ela-260302
-source ~/venv/hepmad/bin/activate
-python /home/harry/projects/hepmad/.claude/skills/md-to-pdf/scripts/convert.py meeting-summary.md
+# Navigate to your project directory
+cd /path/to/your/project
+source ~/venv/hepmad/bin/activate  # Or your preferred virtual environment
+python .claude/skills/md-to-pdf/scripts/convert.py meeting-summary.md
 
 # Output: meeting-summary.pdf (in same directory)
 ```
@@ -193,7 +193,7 @@ sudo apt install python3-dev libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
 
 **Solution:**
 ```bash
-source ~/venv/hepmad/bin/activate
+source ~/venv/hepmad/bin/activate  # Or your preferred virtual environment
 pip install markdown weasyprint pygments
 ```
 
